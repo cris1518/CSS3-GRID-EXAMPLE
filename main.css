@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+ body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+.grid {
+	grid-row-gap: 20px;
+	grid-column-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	display: grid;
+	background: #ddd;
+}
+.container {
+	background: #ddd;
+	padding: 20px;
+}
+.box {
+	background-color: #064786;
+	color: white;
+	padding: 1rem;
+}
+.box,
+.grid {
+	border-radius: 6px;
+}
+.header {
+	background: #0a67c1;
+	padding: 10px;
+}
+@media (min-width: 300px) {
+	.header ul {
+		grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.header ul {
+		text-align: center;
+		width: 100%;
+		margin-left: -40px;
+	}
+	.container {
+		display: block;
+		text-align: center;
+	}
+}
+@media (min-width: 900px) {
+	.header ul {
+		display: grid;
+		grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+	}
+	.brand {
+		float: left;
+		clear: left;
+		margin-left: 20px;
+	}
+	.container {
+		display: block;
+		text-align: left;
+	}
+}
+.menu-item {
+	list-style: none;
+	padding-top: 20px;
+}
+.menu-item a {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+}
+.menu-item a:hover {
+	background: #1e90ff;
+	border-radius: 10px;
+	animation-duration: 2s;
+}
+.brand {
+	height: 70px;
+	margin-top: -20px;
+}
